@@ -19,12 +19,18 @@
         <img class="logo" src="img/logo.png" alt="Guess The Word" />
       </h1>
       <p class="message"></p>
+      <div class="celebrate hide">
+        <div style="width:100%;height:0;padding-bottom:71%;position:relative;">
+        <iframe src="https://giphy.com/embed/O2imWWcO8Mgco" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        </div>
+        <p><a href="https://giphy.com/gifs/free-emoticons-smileys-O2imWWcO8Mgco">via GIPHY</a></p>
+      </div>
       <p class="word-in-progress"></p>
       <p class="remaining">You have <span>8 guesses</span> remaining.</p>
       <ul class="guessed-letters"></ul>
       <form action="" class="guess-form">
         <label for="letter">Type one letter:</label>
-        <input type="text" name="letter" class="letter" />
+        <input type="text" name="letter" class="letter" onkeyup="inputKeyUp(event)" />
         <div class="form-element button-element">
           <button class="guess">Guess!</button>
         </div>
