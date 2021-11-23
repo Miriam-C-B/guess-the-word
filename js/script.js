@@ -8,7 +8,7 @@ const message = document.querySelector(".message"); //paragraph where messages w
 const playAgainButton = document.querySelector(".play-again"); // button prompting player to play again
 
 let word = "magnolia"; 
-const guessedLetters = [];
+let guessedLetters = [];
 let remainingGuesses = 8;
 
 //async function to get words
@@ -149,7 +149,7 @@ playAgainButton.addEventListener("click", function() {
     guessedLettersElement.innerHTML = "";
 
     remainingGuesses = 8;
-    guessedLetter = [];
+    guessedLetters = [];
     remainingGuessesSpan.innerText = `${remainingGuesses} guesses`;
 
     getWord();
