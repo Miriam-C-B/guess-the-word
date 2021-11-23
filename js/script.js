@@ -6,7 +6,7 @@ const remainingGuessesElement = document.querySelector(".remaining"); //paragrap
 const remainingGuessesSpan = document.querySelector(".remaining span"); //span inside the paragraph with remaining guesses
 const message = document.querySelector(".message"); //paragraph where messages will appear when player guesses a letter
 const playAgainButton = document.querySelector(".play-again"); // button prompting player to play again
-const celebrate = document.querySelector(".")
+const celebrate = document.querySelector(".celebrate") // celebration giphy
 
 let word = "magnolia"; 
 let guessedLetters = [];
@@ -24,7 +24,15 @@ const getWord = async function () {
 
 getWord();
 
+//function to use enter to input letter
+function inputKeyUp(e) {
+    e.which = e.which || e.keyCode;
+    if(e.which == 13) {
+        // submit
+    }
+}
 
+//function that displays dots for every letter
 const placeholder = function (word) {
     const placeholderLetters = [];
     for (const letter of word) {
@@ -34,12 +42,12 @@ const placeholder = function (word) {
     wordInProgress.innerText = placeholderLetters.join("");
 }; 
 
+//function to capture input
 guessLetterButton.addEventListener("click", function(e) {
     e.preventDefault();
     message.innerText = "";
     const guess = letterInput.value;
     
-    //step 5 of the "create a function to capture input" is supposed to go here
     const goodGuess = validatePlayerInput(guess);
 
     if (goodGuess) {
@@ -49,6 +57,7 @@ guessLetterButton.addEventListener("click", function(e) {
 
 });
 
+//function to check that players input letters
 const validatePlayerInput = function (input) {
     const acceptedLetter = /[a-zA-Z]/;
     
@@ -63,6 +72,7 @@ const validatePlayerInput = function (input) {
     }
 }
 
+//function to check if player already guessed a letter
 const makeGuesses = function(guess) {
     guess = guess.toUpperCase();
     if (guessedLetters.includes(guess)) {
@@ -76,6 +86,7 @@ const makeGuesses = function(guess) {
     } 
 };
 
+//function to show guessed letters
 const showGuessedLetters = function () {
     guessedLettersElement.innerHTML = "";
     
@@ -86,6 +97,7 @@ const showGuessedLetters = function () {
     }
  };
 
+ //function to update the word in progress
  const updateWordInProgress = function(guessedLetters) {
     const wordUpper = word.toUpperCase();
     const wordArray = wordUpper.split("");
