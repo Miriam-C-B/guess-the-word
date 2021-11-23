@@ -6,7 +6,7 @@ const remainingGuessesElement = document.querySelector(".remaining"); //paragrap
 const remainingGuessesSpan = document.querySelector(".remaining span"); //span inside the paragraph with remaining guesses
 const message = document.querySelector(".message"); //paragraph where messages will appear when player guesses a letter
 const playAgainButton = document.querySelector(".play-again"); // button prompting player to play again
-const celebrate = document.querySelector(".")
+const celebrate = document.querySelector(".celebrate"); //celebrate giphy
 
 let word = "magnolia"; 
 let guessedLetters = [];
