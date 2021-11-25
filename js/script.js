@@ -8,6 +8,8 @@ const message = document.querySelector(".message"); //paragraph where messages w
 const playAgainButton = document.querySelector(".play-again"); // button prompting player to play again
 const celebrate = document.querySelector(".celebrate") // celebration giphy
 
+//personal version
+
 let word = "magnolia"; 
 let guessedLetters = [];
 let remainingGuesses = 8;
