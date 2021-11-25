@@ -6,7 +6,7 @@ const remainingGuessesElement = document.querySelector(".remaining"); //paragrap
 const remainingGuessesSpan = document.querySelector(".remaining span"); //span inside the paragraph with remaining guesses
 const message = document.querySelector(".message"); //paragraph where messages will appear when player guesses a letter
 const playAgainButton = document.querySelector(".play-again"); // button prompting player to play again
-const celebrate = document.querySelector(".celebrate"); //celebrate giphy
+//const celebrate = document.querySelector(".celebrate"); //celebrate giphy
 
 let word = "magnolia"; 
 let guessedLetters = [];
@@ -129,7 +129,7 @@ const wonGame = function() {
        
     if (word.toUpperCase() === wordInProgress.innerText) {
         message.classList.add("win");
-        celebrate.classList.remove("hide");
+        //celebrate.classList.remove("hide");
         message.innerHTML = `<p class="highlight">You guessed the correct word! Congrats!</p>`;
 
         startOver();
@@ -160,7 +160,7 @@ playAgainButton.addEventListener("click", function() {
     remainingGuessesElement.classList.remove("hide");
     guessedLettersElement.classList.remove("hide");
     playAgainButton.classList.add("hide");
-    celebrate.classList.add("hide");   
+    //celebrate.classList.add("hide");   
 });
 
 
