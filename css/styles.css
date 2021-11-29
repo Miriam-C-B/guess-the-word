@@ -13,14 +13,14 @@ body {
   font-size: 20px;
   line-height: 150%;
   background-color: #dff6f6;
-  background-image: url("../img/bg.png");
+  background-image: url("../img/bg-holidays.png");
   background-size: 800px;
   background-repeat: repeat;
   color: #305050;
 }
 
 .logo {
-  width: 70%;
+  width: 90%;
   max-width: 484px;
 }
 
@@ -33,6 +33,16 @@ h1 {
   font-weight: normal;
   font-size: 44px;
   text-align: center;
+}
+
+.celebrate {
+  width: 90%;
+  max-width: 484px;
+}
+
+.cat {
+  width: 90%;
+  max-width: 484px;
 }
 
 .container {
@@ -52,7 +62,7 @@ h1 {
 
 .highlight {
   padding: 0.25em;
-  background: #ffe2d6;
+  background: #28bdbd;
   font-size: 1em;
 }
 
@@ -138,7 +148,7 @@ input:focus {
 /* animated background */
 .win {
   padding: 0 1em;
-  background: linear-gradient(-45deg, #ff9d64, #f5620c);
+  background: linear-gradient(-45deg, #F54539, #C61010);
   background-size: 400% 400%;
   animation: gradient 2s ease infinite;
 }

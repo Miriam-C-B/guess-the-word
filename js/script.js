@@ -6,7 +6,8 @@ const remainingGuessesElement = document.querySelector(".remaining"); //paragrap
 const remainingGuessesSpan = document.querySelector(".remaining span"); //span inside the paragraph with remaining guesses
 const message = document.querySelector(".message"); //paragraph where messages will appear when player guesses a letter
 const playAgainButton = document.querySelector(".play-again"); // button prompting player to play again
-const celebrate = document.querySelector(".celebrate") // celebration giphy
+const celebrate = document.querySelector(".celebrate"); // celebration giphy
+const cat = document.querySelector(".cat"); // cat image if you lose
 
 //personal version
 
@@ -128,8 +129,9 @@ const countRemainingGuesses = function (guess) {
     }
 
     if (remainingGuesses === 0) {
-        message.innerHTML = `Game Over! The word was <span class="highlight">${word}</span>.`;
+        message.innerHTML = `The word was <span class="highlight">${word}</span>. But there's no need to hide! Just try again.`;
         remainingGuessesSpan.innerText = `${remainingGuesses} guesses`;
+        cat.classList.remove("hide");
         startOver();
     } else if (remainingGuesses === 1) {
         remainingGuessesSpan.innerText = `${remainingGuesses} guess`;
@@ -175,6 +177,7 @@ playAgainButton.addEventListener("click", function() {
     guessedLettersElement.classList.remove("hide");
     playAgainButton.classList.add("hide");
     celebrate.classList.add("hide");   
+    cat.classList.add("hide");
 });
 
 
