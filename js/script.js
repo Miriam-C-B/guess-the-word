@@ -8,6 +8,11 @@ const message = document.querySelector(".message"); //paragraph where messages w
 const playAgainButton = document.querySelector(".play-again"); // button prompting player to play again
 const celebrate = document.querySelector(".celebrate"); // celebration giphy
 const cat = document.querySelector(".cat"); // cat image if you lose
+const darkMode = document.querySelector("#toggle"); //button to change to dark mode
+const ball = document.querySelector(".ball"); // switch to turn on dark mode
+const body = document.querySelector("body"); // body of the document
+const switchButton = document.querySelector(".switch") // to change background of switch button in light mode 
+
 
 //personal version
 
@@ -26,6 +31,32 @@ const getWord = async function () {
 };
 
 getWord();
+
+//Event listener to switch to dark mode
+darkMode.addEventListener("click", function () {
+    if (body.classList.contains("light")) {
+        body.classList.remove("light");
+        ball.classList.remove("move-right");
+        ball.style.backgroundColor = "#166969";
+        switchButton.style.backgroundColor = "rgb(133, 205, 238)";
+        wordInProgress.style.color = "rgb(133, 205, 238)";
+        guessLetterButton.style.background = "rgb(133, 205, 238)";
+        playAgainButton.style.background = "rgb(133, 205, 238)";
+        guessLetterButton.style.color = "#166969";
+        playAgainButton.style.color = "#166969";
+    } else {
+        body.classList.add("light");
+        ball.classList.add("move-right");
+        ball.style.backgroundColor = "rgb(133, 205, 238)";
+        switchButton.style.backgroundColor = "#166969";
+        wordInProgress.style.color = "#166969";
+        guessLetterButton.style.background = "#166969";
+        playAgainButton.style.background = "#166969";
+        guessLetterButton.style.color = "rgb(133, 205, 238)";
+        playAgainButton.style.color = "rgb(133, 205, 238)";
+    }
+});
+
 
 //function to use enter to input letter
 function inputKeyUp(e) {

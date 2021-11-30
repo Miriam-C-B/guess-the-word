@@ -13,15 +13,64 @@ body {
   font-size: 20px;
   line-height: 150%;
   background-color: #dff6f6;
-  background-image: url("../img/bg-holidays.png");
+  background-image: url("../img/bg-holidays-dm.png");
   background-size: 800px;
   background-repeat: repeat;
-  color: #0c1414;
+  color: rgb(133, 205, 238);
+}
+
+body.light {
+  background-image: url("../img/bg-holidays.png");
+  color: #192727;
 }
 
 .logo {
   width: 90%;
   max-width: 484px;
+}
+
+.switch-container {
+  text-align: center;
+  padding-bottom: 2em;
+  display: flex;
+  align-items: center;
+}
+
+.switch-container p {
+  padding: 0 1em;
+}
+
+.switch-container input {
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+.switch {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 34px;
+  background-color: rgb(133, 205, 238);
+  border-radius: 34px;
+}
+
+.ball {
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  border-radius: 50%;
+  background-color: #166969;
+  transition: transform 0.2s ease-out;
+}
+
+.ball.move-right {
+  -webkit-transform: translateX(34px);
+  -ms-transform: translateX(34px);
+  transform: translateX(34px);
 }
 
 h1 {
@@ -62,7 +111,7 @@ h1 {
 
 .highlight {
   padding: 0.25em;
-  background: #28bdbd;
+  background: rgb(133, 205, 238);
   color: white;
   font-size: 1em;
 }
@@ -74,7 +123,7 @@ h1 {
 
 .word-in-progress {
   letter-spacing: 15px;
-  color: #28bdbd;
+  color: rgb(133, 205, 238);
   font-size: 30px;
 }
 
@@ -111,13 +160,13 @@ input {
   font-size: 1.5em;
   margin-top: 0.5em;
   padding: 0.5em;
-  border: 3px solid #28bdbd;
+  border: 3px solid #166969;
 }
 
 input:active,
 input:focus {
   outline: 0;
-  border: 4px solid #28bdbd;
+  border: 4px solid #166969;
 }
 
 .guess,
@@ -125,8 +174,8 @@ input:focus {
   padding: 1em 3em;
   border-radius: 50px;
   margin-top: 1em;
-  color: #fff;
-  background: #ff8d5c;
+  color: #166969;
+  background: rgb(133, 205, 238);
   font-size: 1em;
   align-self: center;
   outline: none;
@@ -149,7 +198,7 @@ input:focus {
 /* animated background */
 .win {
   padding: 0 1em;
-  background: linear-gradient(-45deg, #F54539, #C61010);
+  background: linear-gradient(-45deg, #1a8181, #166969);
   background-size: 400% 400%;
   animation: gradient 2s ease infinite;
 }
