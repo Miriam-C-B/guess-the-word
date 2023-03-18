@@ -22,7 +22,7 @@ let remainingGuesses = 8;
 
 //async function to get words
 const getWord = async function () {
-    const res = await fetch("https://raw.githubusercontent.com/Miriam-C-B/gtw-holidays-words/main/holidays-word-list.txt");
+    const res = await fetch("https://raw.githubusercontent.com/Miriam-C-B/mindset-wordlist/main/mindset-wordlist.txt");
     const words = await res.text();
     const wordArray = words.split("\n");
     const randomIndex = Math.floor(Math.random() * wordArray.length);
