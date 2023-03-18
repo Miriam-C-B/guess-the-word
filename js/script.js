@@ -13,7 +13,7 @@ const ball = document.querySelector(".ball"); // switch to turn on dark mode
 const body = document.querySelector("body"); // body of the document
 const switchButton = document.querySelector(".switch") // to change background of switch button in light mode 
 
-
+//this is the mindset vversion
 //personal version
 
 let word = "magnolia"; 
