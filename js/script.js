@@ -160,7 +160,7 @@ const countRemainingGuesses = function (guess) {
     }
 
     if (remainingGuesses === 0) {
-        message.innerHTML = `The word was <span class="highlight">${word}</span>. But there's no need to hide! Just try again.`;
+        message.innerHTML = `The word was <span class="highlight">${word}</span>. Try the next one!`;
         remainingGuessesSpan.innerText = `${remainingGuesses} guesses`;
         cat.classList.remove("hide");
         startOver();
